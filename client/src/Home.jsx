@@ -79,13 +79,24 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="insight">
-        <p>
-          Your spending is most concentrated in <strong>{topCat[0]}</strong>, accounting for <strong>{Math.round(topCat[1]/total*100)}%</strong> of your total.
-          {imp.length && del.length ? <> Impulse purchases average <strong>{fmt(avgImp)}</strong> — {avgImp > avgDel ? 'more' : 'less'} than your deliberate average of <strong>{fmt(avgDel)}</strong>.</> : null}
-          {busiestDay >= 0 ? <> You tend to spend most on <strong>{DAYS[busiestDay]}s</strong>.</> : null}
-        </p>
-      </div>
+   <div style={{padding: '0 16px', marginBottom: '22px'}}>
+  <button
+    className="insights-btn"
+    onClick={() => document.getElementById('insights-panel').classList.toggle('open')}
+  >
+    <span>View insights</span>
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+      <path d="M2 5L7 9L12 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  </button>
+  <div className="insights-panel" id="insights-panel">
+    <p>
+      Your spending is most concentrated in <strong>{topCat[0]}</strong>, accounting for <strong>{Math.round(topCat[1]/total*100)}%</strong> of your total.
+      {imp.length && del.length ? <> Impulse purchases average <strong>{fmt(avgImp)}</strong> — {avgImp > avgDel ? 'more' : 'less'} than your deliberate average of <strong>{fmt(avgDel)}</strong>.</> : null}
+      {busiestDay >= 0 ? <> You tend to spend most on <strong>{DAYS[busiestDay]}s</strong>.</> : null}
+    </p>
+  </div>
+</div>
 
       <div className="sec">
         <div className="sec-title">Impulse vs deliberate</div>
