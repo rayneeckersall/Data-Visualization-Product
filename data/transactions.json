@@ -1,0 +1,356 @@
+[
+  {
+    "date": "2026-03-22",
+    "amount": 31.7,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-22",
+    "amount": 9.89,
+    "cat": "Shopping",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-22",
+    "amount": 54.97,
+    "cat": "Shopping",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-21",
+    "amount": 14.79,
+    "cat": "Shopping",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-20",
+    "amount": 7.99,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-20",
+    "amount": 138,
+    "cat": "Transport",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-03-19",
+    "amount": 20.53,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-19",
+    "amount": 13.62,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-18",
+    "amount": 11.29,
+    "cat": "Subscriptions",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-03-17",
+    "amount": 99.38,
+    "cat": "Shopping",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-17",
+    "amount": 17.48,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-17",
+    "amount": 271.49,
+    "cat": "Transport",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-03-16",
+    "amount": 20.12,
+    "cat": "Food & Drink",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-03-16",
+    "amount": 75.19,
+    "cat": "Transport",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-03-15",
+    "amount": 27.12,
+    "cat": "Subscriptions",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-03-15",
+    "amount": 137.78,
+    "cat": "Shopping",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-13",
+    "amount": 18.08,
+    "cat": "Entertainment",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-03-13",
+    "amount": 31.94,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-12",
+    "amount": 44.01,
+    "cat": "Shopping",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-11",
+    "amount": 8.46,
+    "cat": "Shopping",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-11",
+    "amount": 8.68,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-10",
+    "amount": 15.85,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-08",
+    "amount": 163.85,
+    "cat": "Entertainment",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-03-08",
+    "amount": 48.59,
+    "cat": "Entertainment",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-03-08",
+    "amount": 62.25,
+    "cat": "Food & Drink",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-03-07",
+    "amount": 248.14,
+    "cat": "Other",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-03-07",
+    "amount": 11.29,
+    "cat": "Subscriptions",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-03-07",
+    "amount": 8.41,
+    "cat": "Subscriptions",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-03-06",
+    "amount": 5.23,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-06",
+    "amount": 9.57,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-06",
+    "amount": 15.13,
+    "cat": "Health & Beauty",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-03-06",
+    "amount": 138,
+    "cat": "Transport",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-03-05",
+    "amount": 13.06,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-05",
+    "amount": 70.45,
+    "cat": "Food & Drink",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-03-04",
+    "amount": 64.32,
+    "cat": "Transport",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-03-04",
+    "amount": 9.93,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-03",
+    "amount": 31.64,
+    "cat": "Subscriptions",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-03-03",
+    "amount": 47.44,
+    "cat": "Shopping",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-03",
+    "amount": 18.26,
+    "cat": "Subscriptions",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-03-03",
+    "amount": 7.29,
+    "cat": "Shopping",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-01",
+    "amount": 5.23,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-03-01",
+    "amount": 5.93,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-02-28",
+    "amount": 3.15,
+    "cat": "Subscriptions",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-02-27",
+    "amount": 11.28,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-02-27",
+    "amount": 12.66,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-02-26",
+    "amount": 39.52,
+    "cat": "Health & Beauty",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-02-26",
+    "amount": 12.66,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-02-25",
+    "amount": 26.22,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-02-23",
+    "amount": 9.24,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-02-23",
+    "amount": 57.32,
+    "cat": "Food & Drink",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-02-22",
+    "amount": 14.53,
+    "cat": "Shopping",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-02-22",
+    "amount": 32.77,
+    "cat": "Entertainment",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-02-22",
+    "amount": 58.41,
+    "cat": "Food & Drink",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-02-22",
+    "amount": 11.85,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-02-21",
+    "amount": 10.98,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-02-20",
+    "amount": 10.15,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-02-20",
+    "amount": 8.98,
+    "cat": "Food & Drink",
+    "type": "impulse"
+  },
+  {
+    "date": "2026-02-20",
+    "amount": 15.81,
+    "cat": "Shopping",
+    "type": "deliberate"
+  },
+  {
+    "date": "2026-02-20",
+    "amount": 138,
+    "cat": "Transport",
+    "type": "deliberate"
+  }
+]
