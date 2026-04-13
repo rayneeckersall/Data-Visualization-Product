@@ -625,3 +625,29 @@ html, body, #root {
 
 .sec { margin-bottom: 30px; }
 .hero { margin: 0 16px 30px; }
+
+.chart-toggle {
+  display: flex;
+  background: var(--bg2);
+  border-radius: 8px;
+  padding: 2px;
+  gap: 2px;
+}
+
+.ct-btn {
+  padding: 4px 10px;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: transparent;
+  color: var(--ink3);
+  transition: all 0.15s;
+}
+
+.ct-btn.active {
+  background: var(--surface);
+  color: var(--green);
+}

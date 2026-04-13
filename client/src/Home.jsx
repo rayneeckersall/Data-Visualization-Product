@@ -13,6 +13,7 @@ function fmt(n) {
 
 export default function Home() {
   const [txs, setTxs] = useState([])
+  const [chartView, setChartView] = useState('week')
 
   useEffect(() => {
     fetch('/api/transactions')
@@ -128,22 +129,89 @@ export default function Home() {
       </div>
 
       <div className="sec">
-        <div className="sec-title">Day of the week</div>
-        <div className="dow-wrap">
-          {days.map((v, i) => {
-            const h = Math.round((v/maxDay)*60)
-            const hasImp = txs.some(t => new Date(t.date+'T12:00:00').getDay()===i && t.type==='impulse')
-            return (
-              <div className="dow-col" key={i}>
-                <div className="dow-outer">
-                  <div className="dow-inner" style={{height: h+'px', background: hasImp ? 'var(--impulse)' : 'var(--green)'}}></div>
-                </div>
-                <div className="dow-label">{DAYS[i].slice(0,2)}</div>
-              </div>
-            )
-          })}
-        </div>
-      </div>
+  <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:'10px'}}>
+    <div className="sec-title" style={{marginBottom:0}}>Day of the week</div>
+    <div className="chart-toggle">
+      <button className={chartView === 'week' ? 'ct-btn active' : 'ct-btn'} onClick={() => setChartView('week')}>By day</button>
+      <button className={chartView === 'time' ? 'ct-btn active' : 'ct-btn'} onClick={() => setChartView('time')}>Over time</button>
+    </div>
+  </div>
+
+  {chartView === 'week' && (
+    <div className="dow-wrap">
+      {days.map((v, i) => {
+        const h = Math.round((v/maxDay)*60)
+        const hasImp = txs.some(t => new Date(t.date+'T12:00:00').getDay()===i && t.type==='impulse')
+        return (
+          <div className="dow-col" key={i}>
+            <div className="dow-outer">
+              <div className="dow-inner" style={{height: h+'px', background: hasImp ? 'var(--impulse)' : 'var(--green)'}}></div>
+            </div>
+            <div className="dow-label">{DAYS[i].slice(0,2)}</div>
+          </div>
+        )
+      })}
+    </div>
+  )}
+
+  {chartView === 'time' && (
+    <div style={{background:'var(--surface)', borderRadius:'12px', padding:'14px', border:'0.5px solid var(--border)'}}>
+      {(() => {
+        const byDate = {}
+        txs.forEach(t => byDate[t.date] = (byDate[t.date]||0) + t.amount)
+        const sorted = Object.entries(byDate).sort((a,b) => a[0].localeCompare(b[0]))
+        const max = Math.max(...sorted.map(([,v]) => v), 1)
+        const min = 0
+        const H = 80
+        const W = sorted.length
+        if (W < 2) return <div style={{fontSize:'12px',color:'var(--ink3)',textAlign:'center',padding:'20px 0'}}>Not enough data yet.</div>
+        const points = sorted.map(([,val], i) => {
+          const x = (i / (W-1)) * 100
+          const y = H - Math.round((val/max) * (H-8))
+          return `${x},${y}`
+        }).join(' ')
+        const area = `0,${H} ` + sorted.map(([,val], i) => {
+          const x = (i / (W-1)) * 100
+          const y = H - Math.round((val/max) * (H-8))
+          return `${x},${y}`
+        }).join(' ') + ` 100,${H}`
+        return (
+          <div>
+            <svg viewBox="0 0 300 80" style={{width:'100%', height:'80px', overflow:'visible'}}>
+  <polygon points={
+    `0,80 ` + sorted.map(([,val], i) => {
+      const x = (i / (W-1)) * 300
+      const y = 80 - Math.round((val/max) * 72)
+      return `${x},${y}`
+    }).join(' ') + ` 300,80`
+  } fill="var(--green)" fillOpacity="0.08"/>
+  <polyline points={
+    sorted.map(([,val], i) => {
+      const x = (i / (W-1)) * 300
+      const y = 80 - Math.round((val/max) * 72)
+      return `${x},${y}`
+    }).join(' ')
+  } fill="none" stroke="var(--green)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  {sorted.map(([,val], i) => {
+    const x = (i / (W-1)) * 300
+    const y = 80 - Math.round((val/max) * 72)
+    return <circle key={i} cx={x} cy={y} r="2.5" fill="var(--green)"/>
+  })}
+</svg>
+            <div style={{display:'flex', justifyContent:'space-between', marginTop:'6px', fontSize:'10px', color:'var(--ink3)'}}>
+              {(() => {
+                const dates = sorted.map(([d]) => d)
+                const first = new Date(dates[0]+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'})
+                const last = new Date(dates[dates.length-1]+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'})
+                return <><span>{first}</span><span>{last}</span></>
+              })()}
+            </div>
+          </div>
+        )
+      })()}
+    </div>
+  )}
+</div>
     </div>
   )
 }
