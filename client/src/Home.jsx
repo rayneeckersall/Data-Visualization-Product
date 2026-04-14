@@ -140,7 +140,7 @@ export default function Home() {
   {chartView === 'week' && (
     <div className="dow-wrap">
       {days.map((v, i) => {
-        const h = Math.round((v/maxDay)*60)
+       const h = Math.round((v/maxDay)*120)
         const hasImp = txs.some(t => new Date(t.date+'T12:00:00').getDay()===i && t.type==='impulse')
         return (
           <div className="dow-col" key={i}>
@@ -167,34 +167,34 @@ export default function Home() {
         if (W < 2) return <div style={{fontSize:'12px',color:'var(--ink3)',textAlign:'center',padding:'20px 0'}}>Not enough data yet.</div>
         const points = sorted.map(([,val], i) => {
           const x = (i / (W-1)) * 100
-          const y = H - Math.round((val/max) * (H-8))
+          const y = 120 - Math.round((val/max) * 112)
           return `${x},${y}`
         }).join(' ')
         const area = `0,${H} ` + sorted.map(([,val], i) => {
           const x = (i / (W-1)) * 100
-          const y = H - Math.round((val/max) * (H-8))
+         const y = 120 - Math.round((val/max) * 112)
           return `${x},${y}`
         }).join(' ') + ` 100,${H}`
         return (
           <div>
-            <svg viewBox="0 0 300 80" style={{width:'100%', height:'80px', overflow:'visible'}}>
+           <svg viewBox="0 0 300 120" style={{width:'100%', height:'160px', overflow:'visible'}}>
   <polygon points={
-    `0,80 ` + sorted.map(([,val], i) => {
-      const x = (i / (W-1)) * 300
-      const y = 80 - Math.round((val/max) * 72)
-      return `${x},${y}`
-    }).join(' ') + ` 300,80`
-  } fill="var(--green)" fillOpacity="0.08"/>
+  `0,120 ` + sorted.map(([,val], i) => {
+    const x = (i / (W-1)) * 300
+    const y = 120 - Math.round((val/max) * 112)
+    return `${x},${y}`
+  }).join(' ') + ` 300,120`
+} fill="var(--green)" fillOpacity="0.08"/>
   <polyline points={
     sorted.map(([,val], i) => {
       const x = (i / (W-1)) * 300
-      const y = 80 - Math.round((val/max) * 72)
+      const y = 120 - Math.round((val/max) * 112)
       return `${x},${y}`
     }).join(' ')
   } fill="none" stroke="var(--green)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
   {sorted.map(([,val], i) => {
     const x = (i / (W-1)) * 300
-    const y = 80 - Math.round((val/max) * 72)
+    const y = 120 - Math.round((val/max) * 112)
     return <circle key={i} cx={x} cy={y} r="2.5" fill="var(--green)"/>
   })}
 </svg>
